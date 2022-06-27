@@ -8,9 +8,23 @@ pip3 install -r requirements.txt
 sudo apt-get install -y --no-install-recommends libjpeg-dev libglm-dev libgl1-mesa-glx libegl1-mesa-dev mesa-utils xorg-dev freeglut3-dev
 rm -rf ./build
 python3 setup.py install --with-cuda --bullet
+pip3 install -e .
 sudo apt install gstreamer1.0-libav
 ```
 
+```bash
+cd habitat-lab
+git checkout stable
+pip install -r requirements.txt
+python setup.py develop --all # install habitat and habitat_baselines
+```
+
+## Interactive Play
+```bash
+pip install pygame==1.9.6
+cd habitat-lab/examples
+python3 python3 interactive_play.py
+```
 
 ## Running
 ### Viewer
